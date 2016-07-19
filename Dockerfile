@@ -49,7 +49,7 @@ RUN cd /tmp && wget -q https://storage.googleapis.com/golang/go1.6.2.linux-amd64
 RUN ~/.vim/bundle/YouCompleteMe/install.py --gocode-completer
 
 # script to generate ctags and cscope db
-COPY vimrc-init myvimrc tags-gen.sh /tmp/
+COPY vimrc-init tags-gen.sh /tmp/
 
 # Setup vimrc and install go tools
 RUN mv /tmp/vimrc-init ~/.vimrc && \
@@ -58,6 +58,8 @@ RUN mv /tmp/vimrc-init ~/.vimrc && \
        vim +GoInstallBinaries +qall && \
        vim +Helptags +qall
 
+# Setup personalized vimrc
+COPY myvimrc /tmp/
 RUN cat /tmp/myvimrc >> ~/.vimrc
 
 ENV DEBIAN_FRONTEND=interactive

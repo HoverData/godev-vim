@@ -45,7 +45,7 @@ Dockerized Golang development environment using vim and all required plugins.
 * curl
  
 ## vimrc
-I have my my own vimrc as default which has some cool things that I like, for example:
+I have my own vimrc as default which has some cool things that I like, for example:
 * Vertical line where the cursor is
 * line numbers
 * syntax highlighting
