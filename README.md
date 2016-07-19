@@ -6,7 +6,7 @@ Dockerized Golang development environment using vim and all required plugins.
 ## Usage: 
 
 * `docker run -it -v ${your_src_dir}:/go/src/${proj_name} godev-vim bash`
-  * if your project is on github.com, mount your project at "/go/src/github.com/${proj_name}". This will ensure your pakage paths are correct
+  * if your project is on github.com, mount your project at "/go/src/github.com/${proj_name}". This will ensure your package paths are correct
   * This will mount your project source directory into your project name inside /go/src/ inside the container. 
   * You can also give a name to your container to track multiple projects/branches
 * Inside the container: `cd /go/src/`
