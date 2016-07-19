@@ -3,16 +3,27 @@ Golang development environment using vim and all required plugins.
 
 ## Usage: 
 
-* "docker run -it -v [your_src_dir]:/go/src/[proj_name] godev-vim bash"
-* This will mount your project source directory into your project name inside /go/src/ inside the container. You can also give a name to your container
-* Inside container "cd /go/src/" not inside your project
+* "docker run -it -v {your_src_dir}:/go/src/{proj_name} godev-vim bash"
+  * if your project is on github.com, mount your project at "/go/src/github.com/{proj_name}". This will ensure your pakage paths are correct
+  * This will mount your project source directory into your project name inside /go/src/ inside the container. 
+  * You can also give a name to your container to track mutiple projects/branches
+* once inside container "cd /go/src/" not inside your project
 * run "./tags-gen.sh" script. This will create cscope files
 * run "ctags -cR", this will generate ctags file
-* Now you can open your files in vim from /go/src directory. It will automatically load cscope files
+* now you can open your files in vim from /go/src directory. It will automatically load cscope & ctags files
+  * There are key-mappings already setup for cscope and ctags. "ctrl+]" + cscope instruction letter
+  * Please refer "cscope_maps" link below for how to navigate your source code from inside vim.
+  * 
+  
+
+## Create a new container for your project specific packages
+* Create a new Dockerfile
+* FROM godev-vim
+* Your packages commands like "go get {package_name}
 
 
 ## godev-vim uses following plugins. 
-Special thanks to all the contributers of these projects to make our life easier.
+Special thanks to all the contributers of these projects to make our life easier
 * pathogen: https://github.com/tpope/vim-pathogen
 * vim-go: https://github.com/fatih/vim-go
 * vim-airline: https://github.com/vim-airline/vim-airline
