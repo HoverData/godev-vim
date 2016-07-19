@@ -9,7 +9,7 @@ Dockerized Golang development environment using vim and all required plugins.
   * if your project is on github.com, mount your project at "/go/src/github.com/{proj_name}". This will ensure your pakage paths are correct
   * This will mount your project source directory into your project name inside /go/src/ inside the container. 
   * You can also give a name to your container to track mutiple projects/branches
-* once inside container "cd /go/src/" not inside your project
+* once inside container "cd /go/src/"
 * run "./tags-gen.sh" script. This will create cscope files
 * run "ctags -cR", this will generate ctags file
 * now you can open your files in vim from /go/src directory. It will automatically load cscope & ctags files
@@ -64,3 +64,8 @@ One can use their own vimrc and rebuild the image. It is very simple. Follow bel
 * after it is successful, you have a new Docker image "my-godev-vim". Use it with above commands
 
 Please let me know your feedback.
+
+
+### Screenshot below:
+
+![alt tag](https://cloud.githubusercontent.com/assets/11622864/16939512/2bcaaeee-4d37-11e6-8311-a30aa8e2b516.png)
