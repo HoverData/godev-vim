@@ -1,5 +1,7 @@
 # godev-vim
-Golang development environment using vim and all required plugins.
+Dockerized Golang development environment using vim and all required plugins.
+
+### Dockerhub link: https://hub.docker.com/r/ctapan/godev-vim
 
 ## Usage: 
 
@@ -13,13 +15,13 @@ Golang development environment using vim and all required plugins.
 * now you can open your files in vim from /go/src directory. It will automatically load cscope & ctags files
   * There are key-mappings already setup for cscope and ctags. "ctrl+]" + cscope instruction letter
   * Please refer "cscope_maps" link below for how to navigate your source code from inside vim.
-  * 
+  
   
 
 ## Create a new container for your project specific packages
 * Create a new Dockerfile
 * FROM godev-vim
-* Your packages commands like "go get {package_name}
+* Your packages commands like "go get {package_name}"
 
 
 ## godev-vim uses following plugins. 
