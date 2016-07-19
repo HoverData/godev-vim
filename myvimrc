@@ -1,0 +1,19 @@
+" Scrolls the screen from the middle of the screen
+"set scrolloff=999
+
+" Highlights the line of the current cursor position.
+set cursorline
+hi CursorLine gui=underline
+
+" Enabled spell checks with underlineing and making it bold.
+" hi SpellBad cterm=underline ctermfg=red --> This will make color red
+set spell
+hi clear SpellBad
+hi SpellBad cterm=underline,bold
+
+" Highlight the letters after column 80.
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"highlight OverLength ctermfg=red
+"match OverLength /\%81v.\+/
+
+
