@@ -58,7 +58,7 @@ I have my own vimrc as default which has some cool things that I like, for examp
 * Clone the repository: `git clone https://github.com/ctapan/godev-vim.git`
 * compare your ".vimrc" with "vimrc-init" file for any possible conflicts
 * replace "myvimrc" with your .vimrc. Please keep the same name "myvimrc". 
-* `docker build -t my-godev-vim`. Run this inside godev-vim directory.
+* Run `docker build -t my-godev-vim .` while inside godev-vim directory
 * It should complete very quickly if you have already pulled the "godev-vim" image.
 * after it is successful, you have a new Docker image "my-godev-vim". Use it with above commands
 
