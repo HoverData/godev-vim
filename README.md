@@ -1,5 +1,5 @@
 # godev-vim
-Dockerized Golang development environment using vim and all required plugins.
+Docker + golang + vim: Dockerized Golang development environment using vim and all required plugins.
 
 ### Dockerhub link: <https://hub.docker.com/r/ctapan/godev-vim>
 
