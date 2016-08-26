@@ -101,4 +101,5 @@ let g:airline_symbols.whitespace = 'Ξ'
 set guifont=DejaVu\ Sans:s12
 
 " Disable godef mappings as it contradicts with cscope and ctags
-let g:go_def_mapping_enabled = 0
+" let g:go_def_mapping_enabled = 0
+let g:go_def_use_buffer = 1
