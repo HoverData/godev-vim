@@ -5,7 +5,7 @@ Docker + golang + vim: Dockerized Golang development environment using vim and a
 
 ## Usage: 
 
-* `docker run -it -v ${your_src_dir}:/go/src/${proj_name} godev-vim bash`
+* `docker run -it -v ${your_src_dir}:/go/src/${proj_name} ctapan/godev-vim bash`
   * if your project is on github.com, mount your project at "/go/src/github.com/${proj_name}". This will ensure your package paths are correct
   * This will mount your project source directory into your project name inside /go/src/ inside the container. 
   * You can also give a name to your container to track multiple projects/branches
@@ -19,7 +19,7 @@ Docker + golang + vim: Dockerized Golang development environment using vim and a
   
 
 ## Create a new container for your project specific packages
-* Create a new Dockerfile with `FROM godev-vim`
+* Create a new Dockerfile with `FROM ctapan/godev-vim`
 * Add commands like `go get ${package_name}`
 
 
@@ -54,12 +54,12 @@ I have my own vimrc as default which has some cool things that I like, for examp
 
 
 ### Want to use your own vimrc?
-* `docker pull godev-vim`
+* `docker pull ctapan/godev-vim`
 * Clone the repository: `git clone https://github.com/ctapan/godev-vim.git`
 * compare your ".vimrc" with "vimrc-init" file for any possible conflicts
 * replace "myvimrc" with your .vimrc. Please keep the same name "myvimrc". 
 * Run `docker build -t my-godev-vim .` while inside godev-vim directory
-* It should complete very quickly if you have already pulled the "godev-vim" image.
+* It should complete very quickly if you have already pulled the "ctapan/godev-vim" image.
 * after it is successful, you have a new Docker image "my-godev-vim". Use it with above commands
 
 Please let me know your feedback.
