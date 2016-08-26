@@ -102,4 +102,7 @@ set guifont=DejaVu\ Sans:s12
 
 " Disable godef mappings as it contradicts with cscope and ctags
 " let g:go_def_mapping_enabled = 0
-let g:go_def_use_buffer = 1
+" let g:go_def_use_buffer = 1
+
+" Use same buffer as cscop
+let g:go_def_use_buffer = 1 
